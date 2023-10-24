@@ -9,6 +9,8 @@ Rense data, få over til riktig datatype
 Lagre i liste eller ordbok eller annet?
 Lukke fila
 
+SSB-filen i sykefravær har et ugunstig format for dictionary lesning
+
 """
 
 #Steg 1: Beskrive datafilen
@@ -19,7 +21,7 @@ import os.path
 import pprint
 
 this_path = os.path.abspath(os.path.dirname(__file__))
-path_csv = os.path.join(this_path, "Data sykefravær/sykefravær.csv")
+path_csv = os.path.join(this_path, "Data Valg2023/valg2023.csv")
 file_json = os.path.join(this_path, "Data sykefravær/sykefravær.json")
 
 
@@ -37,7 +39,7 @@ csv.reader()
 
 
 data_dict = []
-with open(path_csv,'r') as file_csv:
+with open(path_csv,'r',encoding = "utf-8") as file_csv:
     data_dict = list(csv.DictReader(file_csv, delimiter=';', quotechar='"'))
 
 
@@ -50,11 +52,17 @@ def csv2dict(file_name: str =""):
     output = []
     path_csv = os.path.join(this_path, file_name)
     with open(path_csv,'r') as file_csv:
-        output = list(csv.DictReader(file_csv, delimiter=';', quotechar='"'))
+        try:
+            output = list(csv.DictReader(file_csv, delimiter=';', quotechar='"'))
+        except UnicodeDecodeError:
+            print("UnicodeDecodeError")
+        else: 
+            print("Lol")
      
     #for row in output:
     #    print(row)
 
     return output
+
 for row in data_dict:
     pprint.pprint(row)
