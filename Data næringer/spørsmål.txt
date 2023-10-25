@@ -1,0 +1,9 @@
+Spørsmål til datasettet
+
+Tenk ut noe selv :)
+
+Hvor mye omsetning hadde bransjen med størst omsetning i 2019?
+Hvilke to bransjer omsatte for mest i 2017?
+I hvilken bransje, for under 50 ansatte er det størst/minst omsetning?
+Representer tidsutviklingen grafisk for tre næringer i samme koordinatsystem eller med subplot.
+Ta med aksetitler og liknende som kommuniserer og beskriver grafikken.

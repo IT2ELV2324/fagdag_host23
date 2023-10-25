@@ -39,6 +39,7 @@ csv.reader()
 
 
 data_dict = []
+#Det kommer ikke til å gå med mindre encoding = "utf-8"
 with open(path_csv,'r',encoding = "utf-8") as file_csv:
     data_dict = list(csv.DictReader(file_csv, delimiter=';', quotechar='"'))
 

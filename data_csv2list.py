@@ -18,10 +18,10 @@ import csv
 import json
 import os.path
 
+file_name = "Data skogeiere/skogeiere.csv"
 valg2023 = "Data Valg2023/valg2023.csv"
 this_path = os.path.abspath(os.path.dirname(__file__))
-path_csv = os.path.join(this_path, "Data sykefravær/sykefravær.csv")
-
+path_csv = os.path.join(this_path, file_name)
 file_json = os.path.join(this_path, "Data sykefravær/sykefravær.json")
 
 
@@ -37,7 +37,7 @@ csv.reader()
 """
 
 data = []
-#Dette kommer ikke til å gå hvsi vi skriver encoding = "utf-8" i open
+#Dette kommer ikke til å gå hvis vi skriver encoding = "utf-8" i open
 with open(path_csv,'r') as file_csv:
     spamreader = csv.reader(file_csv, delimiter=';', quotechar='"')
     for row in spamreader:
@@ -60,4 +60,5 @@ def read_csv(file_name: str =""):
 csv_list = read_csv("Data sykefravær/sykefravær.csv")
 
 for entry in csv_list:
-    print(entry[0:2])
+    print(entry)
+

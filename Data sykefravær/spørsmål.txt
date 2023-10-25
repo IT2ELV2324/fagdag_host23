@@ -1,0 +1,4 @@
+Spørsmål til datasettet sykefravær
+
+Se gjennom datasettet og forsøk å finne topp tre ett eller annet fra datasettet og presentere dette i en tabell ved hjelp av programmering
+Se gjennom datasettet og forsøk å finne topp tre ett eller annet fra datasettet og presentere dette grafisk ved hjelp av programmering
